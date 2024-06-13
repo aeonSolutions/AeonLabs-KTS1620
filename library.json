@@ -1,0 +1,23 @@
+{
+  "name": "KTS1620",
+  "keywords": "I2C, KTS1620, 16 channel, IO, shift, rotate, readButton, toggle, reverse",
+  "description": "Arduino library for KTS1620 - 24 channel I2C IO expander, implements shift rotate.",
+  "authors":
+  [
+    {
+      "name": "Miguel Tomas",
+      "email": "mtpsilva@gmail.com",
+      "maintainer": true
+    }
+  ],
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/aeonSolutions/AeonLabs-KTS1620.git"
+  },
+  "version": "0.0.1",
+  "license": "Creative Commons",
+  "frameworks": "*",
+  "platforms": "*",
+  "headers": "KTS1620.h"
+}
