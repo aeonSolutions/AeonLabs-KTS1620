@@ -11,7 +11,7 @@
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat&label=Contributions&colorA=red&colorB=black	)](#)
 [<img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" data-canonical-src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="30" />](https://www.buymeacoffee.com/migueltomas)
 
-[Open Software Catalogue](https://github.com/aeonSolutions/aeonlabs-open-software-catalogue)  >> KTS1620 C++ Class Libtary 
+[Open Software Catalogue](https://github.com/aeonSolutions/aeonlabs-open-software-catalogue)  >> KTS1620 C++ Class Library
 
 <p align="right">
  <a href="https://github-com.translate.goog/aeonSolutions/AeonLabs-WCH-Vendor-ID-Programming?_x_tr_sl=nl&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp">Change Language</a> <br>
@@ -19,7 +19,7 @@ Last update: 23-12-2023
 </p>
 
 
-# KTS1620 C++ Class Libtary 
+# KTS1620 C++ Class Library 
 
 Arduino library for KTS1620 - 24 channel I2C IO expander.
 
