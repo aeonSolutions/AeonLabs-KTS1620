@@ -9,7 +9,7 @@
 [![PlatformIO Registry](https://badges.registry.platformio.org/packages/robtillaart/library/PCF8575.svg)](https://registry.platformio.org/libraries/robtillaart/PCF8575)
 
 
-# PCF8575
+# KTS1620
 
 Arduino library for KTS1620 - 24 channel I2C IO expander.
 
