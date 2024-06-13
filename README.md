@@ -11,26 +11,26 @@
 
 # PCF8575
 
-Arduino library for PCF8575 - 16 channel I2C IO expander.
+Arduino library for KTS1620 - 24 channel I2C IO expander.
 
 
 ## Description
 
-The library gives easy control over the 16 pins of the PCF8575 chips.
+The library gives easy control over the 24 pins of the KTS1620 IC from Kinetic Technologies.
 
-Base address = 0x20 + 0..7 depending on address pins A0..A2.
+Base address = 0x20 + 0..3 depending on how the address pin is connected.
 
 |  type      | address-range  |  notes                    |
 |:-----------|:--------------:|:-------------------------:|
-|  PCF8575   |  0x20 to 0x27  |  same range as PCF8574 !  |
-|  PCF8575C  |  0x20 to 0x27  |  need pull up in input mode. See #36, to be verified.
+|  PCF8575   |  0x20 to 0x23  |                           |
+
 
 
 So you can connect up to 8 PCF8575 on one I2C bus, giving access 
 to 8 x 16 = 128 IO lines. 
 To maximize IO lines combine 8 x PCF8575 + 8 x PCF8574A giving
 128 + 64 = 192 IO lines. 
-Be sure to have a well dimensioned power supply.
+Be sure to have a well-dimensioned power supply.
 
 The library allows to read and write both single pins or 16 pins at once.
 Furthermore some additional functions are implemented that are playful and useful.
