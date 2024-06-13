@@ -25,6 +25,9 @@ Base address = 0x20 + 0..3 depending on how the address pin is connected.
 |  PCF8575   |  0x20 to 0x23  |                           |
 
 
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+To be updated below
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 So you can connect up to 8 PCF8575 on one I2C bus, giving access 
 to 8 x 16 = 128 IO lines. 
