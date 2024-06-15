@@ -33,7 +33,7 @@ Arduino library for KTS1620 - 24 channel I2C IO expander.
 <br>
 
 ## Description
-
+<sup> For similar GPIO Expander libraries see <a href="https://github.com/RobTillaart">Rob Tillaart's </a> repositories </sup> <br>
 The library gives easy control over the 24 pins of the KTS1620 IC from Kinetic Technologies.
 
 Base address = 0x20 + 0..3 depending on how the address pin is connected.
