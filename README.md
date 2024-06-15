@@ -46,11 +46,11 @@ Base address = 0x20 + 0..3 depending on how the address pin is connected.
 ## Interface
 
 ```cpp
-#include "PCF8575.h"
+#include "KTS1620.h"
 ```
 
 **KTS1620_INITIAL_VALUE** is a define that can be set at compile time or before
-the include of "pcf8575.h" to overrule the default value used with the 
+the include of "KTS1620.h" to overrule the default value used with the 
 **begin()** call.
 
 
