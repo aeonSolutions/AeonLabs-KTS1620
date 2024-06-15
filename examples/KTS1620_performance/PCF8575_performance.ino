@@ -1,13 +1,15 @@
 //
-//    FILE: PCF8575_performance.ino
-//  AUTHOR: Rob Tillaart
-// PURPOSE: test PCF8575 library
-//     URL: https://github.com/RobTillaart/PCF8575
+//    FILE: KTS1620.h
+//  AUTHOR: Miguel Tomas
+//    DATE: 2024-06-15
+// VERSION: 0.0.1
+// PURPOSE: Arduino library for KTS1620 - 24 channel I2C IO expander
+//     URL: https://github.com/aeonSolutions/AeonLabs-KTS1620
 
 
-#include "PCF8575.h"
+#include "KTS1620.h"
 
-PCF8575 PCF(0x20);
+KTS1620 KTS(0x20);
 
 uint32_t start, stop;
 
@@ -18,13 +20,13 @@ void setup()
 {
   Serial.begin(115200);
   Serial.println(__FILE__);
-  Serial.print("PCF8575_LIB_VERSION:\t");
-  Serial.println(PCF8575_LIB_VERSION);
+  Serial.print("KTS1620_LIB_VERSION:\t");
+  Serial.println(KTS1620_LIB_VERSION);
 
   Wire.begin();
 
-  PCF.begin();
-  Serial.println(PCF.isConnected());
+  KTS.begin();
+  Serial.println(KTS.isConnected());
   delay(100);  //  time to flush Serial 
 
 
@@ -33,7 +35,7 @@ void setup()
     //  setup and measure
     Wire.setClock(clk);
     start = micros();
-    x = PCF.read16();
+    x = KTS.read16();
     stop = micros();
 
     //  output results
@@ -46,7 +48,7 @@ void setup()
 
     //  measure
     start = micros();
-    PCF.write16(0xFFFF);
+    KTS.write16(0xFFFF);
     stop = micros();
 
     //  output results

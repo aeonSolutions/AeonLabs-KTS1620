@@ -1,8 +1,10 @@
 //
-//    FILE: PCF8575_array.ino
-//  AUTHOR: Rob Tillaart
-// PURPOSE: demo array of PCF - not tested
-//     URL: https://github.com/RobTillaart/PCF8575
+//    FILE: KTS1620.h
+//  AUTHOR: Miguel Tomas
+//    DATE: 2024-06-15
+// VERSION: 0.0.1
+// PURPOSE: Arduino library for KTS1620 - 24 channel I2C IO expander
+//     URL: https://github.com/aeonSolutions/AeonLabs-KTS1620
 
 
 #include "PCF8575.h"

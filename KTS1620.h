@@ -1,11 +1,11 @@
 #pragma once
 //
 //    FILE: KTS1620.h
-//  AUTHOR: Rob Tillaart
-//    DATE: 2024-06-12
+//  AUTHOR: Miguel Tomas
+//    DATE: 2024-06-15
 // VERSION: 0.0.1
 // PURPOSE: Arduino library for KTS1620 - 24 channel I2C IO expander
-//     URL: https://github.com/RobTillaart/KTS1620
+//     URL: https://github.com/aeonSolutions/AeonLabs-KTS1620
 
 
 #include "Arduino.h"

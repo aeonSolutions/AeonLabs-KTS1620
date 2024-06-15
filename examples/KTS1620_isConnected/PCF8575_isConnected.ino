@@ -1,22 +1,24 @@
 //
-//    FILE: PCF8575_isConnected.ino
-//  AUTHOR: Rob Tillaart
-// PURPOSE: demo device detection
-//     URL: https://github.com/RobTillaart/PCF8575
+//    FILE: KTS1620.h
+//  AUTHOR: Miguel Tomas
+//    DATE: 2024-06-15
+// VERSION: 0.0.1
+// PURPOSE: Arduino library for KTS1620 - 24 channel I2C IO expander
+//     URL: https://github.com/aeonSolutions/AeonLabs-KTS1620
 
 
-#include "PCF8575.h"
+#include "KTS1620.h"
 
 //  adjust addresses if needed
-PCF8575 PCF(0x21);
+KTS1620 PCF(0x21);
 
 
 void setup()
 {
   Serial.begin(115200);
   Serial.println(__FILE__);
-  Serial.print("PCF8575_LIB_VERSION:\t");
-  Serial.println(PCF8575_LIB_VERSION);
+  Serial.print("KTS1620_LIB_VERSION:\t");
+  Serial.println(KTS1620_LIB_VERSION);
 
   Wire.begin();
 

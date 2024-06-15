@@ -1,19 +1,21 @@
 //
-//    FILE: PCF8575_test.ino
-//  AUTHOR: Rob Tillaart
-// PURPOSE: test PCF8575 library
-//     URL: https://github.com/RobTillaart/PCF8575
+//    FILE: KTS1620.h
+//  AUTHOR: Miguel Tomas
+//    DATE: 2024-06-15
+// VERSION: 0.0.1
+// PURPOSE: Arduino library for KTS1620 - 24 channel I2C IO expander
+//     URL: https://github.com/aeonSolutions/AeonLabs-KTS1620
 
 
-#include "PCF8575.h"
+#include "KTS1620.h"
 
-PCF8575 PCF(0x20);
+KTS1620 KTS(0x20);
 
 
 void doHigh()
 {
-  PCF.write(4, HIGH);
-  int x = PCF.read16();
+  KTS.write(4, HIGH);
+  int x = KTS.read16();
   Serial.print("Read ");
   printHex(x);
 }
@@ -21,8 +23,8 @@ void doHigh()
 
 void doLow()
 {
-  PCF.write(4, LOW);
-  int x = PCF.read16();
+  KTS.write(4, LOW);
+  int x = KTS.read16();
   Serial.print("Read ");
   printHex(x);
 }
@@ -30,8 +32,8 @@ void doLow()
 
 void doToggle()
 {
-  PCF.toggle(4);
-  int x = PCF.read16();
+  KTS.toggle(4);
+  int x = KTS.read16();
   Serial.print("Read ");
   printHex(x);
 }
@@ -51,14 +53,14 @@ void setup()
 {
   Serial.begin(115200);
   Serial.println(__FILE__);
-  Serial.print("PCF8575_LIB_VERSION:\t");
-  Serial.println(PCF8575_LIB_VERSION);
+  Serial.print("KTS1620_LIB_VERSION:\t");
+  Serial.println(KTS1620_LIB_VERSION);
 
   Wire.begin();
 
-  PCF.begin();
+  KTS.begin();
 
-  uint16_t x = PCF.read16();
+  uint16_t x = KTS.read16();
   Serial.print("Read ");
   printHex(x);
   delay(1000);
