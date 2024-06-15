@@ -1,6 +1,6 @@
 {
   "name": "KTS1620",
-  "keywords": "I2C, KTS1620, 16 channel, IO, shift, rotate, readButton, toggle, reverse",
+  "keywords": "I2C, KTS1620, 24 channel, IO, shift, rotate, readButton, toggle, reverse",
   "description": "Arduino library for KTS1620 - 24 channel I2C IO expander, implements shift rotate.",
   "authors":
   [
