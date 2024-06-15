@@ -24,7 +24,7 @@ Last update: 23-12-2023
 Arduino library for KTS1620 - 24 channel I2C IO expander.
 
 
-[![Arduino CI](https://github.com/RobTillaart/PCF8575/workflows/Arduino%20CI/badge.svg)](https://github.com/marketplace/actions/arduino_ci)
+[![Arduino CI](https://github.com/aeonSolutions/AeonLabs-KTS1620/workflows/Arduino%20CI/badge.svg)](https://github.com/marketplace/actions/arduino_ci)
 [![Arduino-lint](https://github.com/RobTillaart/PCF8575/actions/workflows/arduino-lint.yml/badge.svg)](https://github.com/RobTillaart/PCF8575/actions/workflows/arduino-lint.yml)
 [![JSON check](https://github.com/RobTillaart/PCF8575/actions/workflows/jsoncheck.yml/badge.svg)](https://github.com/RobTillaart/PCF8575/actions/workflows/jsoncheck.yml)
 [![GitHub issues](https://img.shields.io/github/issues/RobTillaart/PCF8575.svg)](https://github.com/RobTillaart/PCF8575/issues)
