@@ -43,34 +43,34 @@ Base address = 0x20 + 0..3 depending on how the address pin is connected.
 |  KTS1620   |  0x20 to 0x23  |                           |
 
 
-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-To be updated below
-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
-
 ## Interface
 
 ```cpp
 #include "PCF8575.h"
 ```
 
-**PCF8575_INITIAL_VALUE** is a define that can be set compile time or before
+**KTS1620_INITIAL_VALUE** is a define that can be set at compile time or before
 the include of "pcf8575.h" to overrule the default value used with the 
 **begin()** call.
 
 
 #### Constructor
 
-- **PCF8575(uint8_t deviceAddress = 0x20, TwoWire \*wire = &Wire)** Constructor with the optional 
-I2C device address, default 0x20, and the optional Wire interface as parameter.
-- **bool begin(uint8_t value = PCF8575_INITIAL_VALUE)** set the initial value for the pins and masks.
+- **KTS1620(uint8_t deviceAddress = 0x20, TwoWire \*wire = &Wire)** Constructor with the optional 
+I2C device address, default 0x20, and the optional Wire interface as a parameter.
+- **bool begin(uint8_t value = KTS1620_INITIAL_VALUE)** set the initial value for the pins and masks.
 - **bool isConnected()** checks if the address is visible on the I2C bus.
 - **bool setAddress(const uint8_t deviceAddress)** sets the device address after construction. 
-Can be used to switch between PCF8575 modules runtime. Note this corrupts internal buffered values, 
-so one might need to call **read16()** and/or **write16()**. 
-Returns false if address is out of range 0x20..0x27 or if the address could not be found on I2C bus.
-Returns true if address can be found on I2C bus.
+Returns false if the address is out of range 0x20..0x23 or if the address cannot be found on the I2C bus.
+Returns true if the address can be found on the I2C bus.
 - **uint8_t getAddress()** returns the device address.
+- 
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+To be updated below
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+
 
 
 #### Read and Write
