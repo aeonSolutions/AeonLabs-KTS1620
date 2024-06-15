@@ -1,9 +1,9 @@
 //
 //    FILE: unit_test_001.cpp
-//  AUTHOR: Rob Tillaart
-//    DATE: 2020-12-03
-// PURPOSE: unit tests for the PCF8575 - 16 channel I2C IO expander.
-//          https://github.com/RobTillaart/PCF8575
+//  AUTHOR: Miguel Tomas
+//    DATE: 2024-06-15
+// PURPOSE: unit tests for the KTS1620 - 24 channel I2C IO expander.
+//          https://github.com/aeonSolutions/AeonLabs-KTS1620
 //          https://github.com/Arduino-CI/arduino_ci/blob/master/REFERENCE.md
 //
 
@@ -33,15 +33,15 @@
 
 
 #include "Arduino.h"
-#include "PCF8575.h"
+#include "KTS1620.h"
 
 
-PCF8575 PCF(0x38);
+KTS1620 PCF(0x38);
 
 
 unittest_setup()
 {
-  fprintf(stderr, "PCF8575_LIB_VERSION: %s\n", (char *) PCF8575_LIB_VERSION);
+  fprintf(stderr, "KTS1620_LIB_VERSION: %s\n", (char *) KTS1620_LIB_VERSION);
 }
 
 
@@ -52,16 +52,16 @@ unittest_teardown()
 
 unittest(test_constants)
 {
-  assertEqual(PCF8575_INITIAL_VALUE, 0xFFFF);
-  assertEqual(PCF8575_OK           , 0x00);
-  assertEqual(PCF8575_PIN_ERROR    , 0x81);
-  assertEqual(PCF8575_I2C_ERROR    , 0x82);
+  assertEqual(KTS1620_INITIAL_VALUE, 0xFFFF);
+  assertEqual(KTS1620_OK           , 0x00);
+  assertEqual(KTS1620_PIN_ERROR    , 0x81);
+  assertEqual(KTS1620_I2C_ERROR    , 0x82);
 }
 
 
 unittest(test_begin)
 {
-  PCF8575 PCF(0x38);
+  KTS1620 PCF(0x38);
 
   Wire.begin();
   PCF.begin();
@@ -69,14 +69,14 @@ unittest(test_begin)
   int readValue = PCF.read16();
   assertEqual(0, readValue);
 
-  int I2Cerror = PCF8575_I2C_ERROR;
+  int I2Cerror = KTS1620_I2C_ERROR;
   assertEqual(I2Cerror, PCF.lastError());
 }
 
 
 unittest(test_read)
 {
-  PCF8575 PCF(0x38);
+  KTS1620 PCF(0x38);
   int readValue;
 
   Wire.begin();
@@ -88,14 +88,14 @@ unittest(test_read)
     readValue = PCF.read(i);
     assertEqual(0, readValue);
 
-    int I2Cerror = PCF8575_I2C_ERROR;
+    int I2Cerror = KTS1620_I2C_ERROR;
     assertEqual(I2Cerror, PCF.lastError());
   }
 
-  fprintf(stderr, "test PCF8575_PIN_ERROR\n");
+  fprintf(stderr, "test KTS1620_PIN_ERROR\n");
   readValue = PCF.read(16);
   assertEqual(0, readValue);
-  int PINerror = PCF8575_PIN_ERROR;
+  int PINerror = KTS1620_PIN_ERROR;
   assertEqual(PINerror, PCF.lastError());
 }
 
