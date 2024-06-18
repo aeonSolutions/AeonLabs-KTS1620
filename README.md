@@ -14,13 +14,15 @@
 [Open Software Catalogue](https://github.com/aeonSolutions/aeonlabs-open-software-catalogue)  >> KTS1620 C++ Class Library
 
 <p align="right">
+ <a href="https://www.kinet-ic.com/kts1620/"> Kinetic Technologies</a> Like this library? <br>
+Consider supporting OSS<br>
  <a href="https://github-com.translate.goog/aeonSolutions/AeonLabs-WCH-Vendor-ID-Programming?_x_tr_sl=nl&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp">Change Language</a> <br>
 Last update: 15-06-2024
 </p>
 
 
 # KTS1620 C++ Class Library 
-
+<sup> I'm still working on this library. It's not finished yet. </sup> <br>
 Arduino library for KTS1620 - 24 channel I2C IO expander.
 
 
